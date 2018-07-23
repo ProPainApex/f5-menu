@@ -94,3 +94,12 @@ function openMenu()
         end
     )
 end
+
+Citizen.CreateThread(function()
+	while true do
+		Citizen.Wait(1)
+		if IsControlJustReleased(0, Keys['F5']) then
+			openMenu()
+		end
+	end
+end)
